@@ -5,7 +5,7 @@ Projeto para análise de dados abertos da saúde do Brasil(SUS) com enfoque na r
 </p>
 
 # Objetivo:
-O objetivo deste projeto é analisar os dados públicos da saúde se utilizando de métodos de tratamentos de dados e vizualição gráfica utilizando os dados de Doses por Unidade da Federação por ano.
+O objetivo deste projeto é analisar os dados públicos da saúde se utilizando de métodos de tratamentos de dados e vizualização gráfica utilizando os dados de Doses de vacina aplicadas por Unidade da Federação por ano.
 
 Vale ser ressaltado que a base de dados utilizada continha o número total de doses de vacinas aplicadas, assim, não especificando grupos sociais ou prioritários nos focos das campanhas, tornando a análise menos contextualizada.
 
@@ -46,17 +46,17 @@ Análise do gráfico de vacinação:
     
  - O terceiro, porém menor, pico em 2018 pode ser explicado pelo aumento do público que poderia receber a vacina contra HPV.
     
- - Observamos um padrão desregular no gráfico e que intuitivamente nós leva a crer que em média a quantidade de vacinação no sudeste está diminuindo com o passar dos anos.
+ - Observamos um padrão desregular no gráfico e que intuitivamente nos leva a crer que em média a quantidade de vacinação no sudeste está diminuindo com o passar dos anos.
     
 Sobre o terceiro gráfico:
 
  - O coeficiente angular do linear fit foi -0.0039 e o coeficiente linear foi 43979496 .
 
-Para complementar a análise eu queria fazer um gráfico da quantidade de vacinas x gasto com saúde pública da região sudeste como um todo, assim, eu plotei   os pontos gerados cruzando essas duas variáveis e fiz um "fit linear" desses pontos, ou seja, uma regressão linear, que é um método para criar a melhor reta que descreva o comportamento dos pontos apresentados, assim, o método chega nos melhores valores para o coeficiente angular da reta( o coeficiente que dá a inclinação da reta) e para o coeficiente linear da reta( o ponto em x onde a reta cruza o valor y=0) e plota um gráfico utilizando esses coeficientes os valores de x fornecidos (aqui, os valores de gasto ).
+Para complementar a análise eu queria fazer um gráfico da quantidade de vacinas x gasto com saúde pública da região sudeste como um todo, assim, eu plotei   os pontos gerados cruzando essas duas variáveis e fiz um "fit linear" desses pontos, ou seja, uma regressão linear, que é um método para criar a melhor reta que descreva o comportamento dos pontos apresentados, assim, o método chega nos melhores valores para o coeficiente angular da reta( o coeficiente que dá a inclinação da reta) e para o coeficiente linear da reta( o ponto em x onde a reta cruza o valor y=0) e plota um gráfico utilizando esses coeficientes e os valores de x fornecidos (aqui, os valores de gasto ).
 
 As primeiras conclusões que podemos obter deste gráfico são:
 
-- Observamos que quanto maior o investimento com saúde pública mais baixo a quantidade de vacinas aplicadas na região sudeste. Como sabemos que ambas as quantidades estão ordenados pelo passar do anos, temos implicitamente que com o passar dos anos o gasto com saúde pública vem aumentando enquanto a média do número de vacinas aplicadas vem diminuindo, resultado que é refletido nos gráficos posteriores por analisarem os mesmos índices.
+- Observamos que quanto maior o investimento com saúde pública mais baixo a quantidade de vacinas aplicadas na região sudeste. Como sabemos que ambas as quantidades estão ordenados pelo passar do anos, temos implicitamente que com o passar dos anos o gasto com saúde pública vem aumentando enquanto a média do número de vacinas aplicadas vem diminuindo, resultado que é refletido nos gráficos anteriores por analisarem os mesmos índices.
 
 - Por conta do coeficiente angular ser muito baixo temos que a variação no eixo x é muito maior que a variação do eixo y, assim, podemos levantar a hipótese que o investimento em saúde na região Sudeste vem crescendo muito mais do que a média de vacinas aplicas na região vem diminuindo.
 
@@ -66,7 +66,7 @@ As primeiras conclusões que podemos obter deste gráfico são:
 
 - Além disso, o datasus só nos fornecia as quantidades totais de vacinação por Unidade federativa por ano e a quantidade total de vacinas contra cada infermidade tratada pelo programa ao longo de todos os anos avaliados, assim, essa segunda base de dados que não contava com o índice temporal não era muito útil para as análises pretendidas nesse trabalho.
 
-- A última análise feita nesse projeto foi uma análise totalmente simples, primeiramente, imaginamos que diversas variáveis governam o compartamento da curva de vacinações, não somente o investimento público em saúde, por exemplo, temos as durações das diferentes campanhas de vacinação e até as emergências de saúde de cada estado da região e vários outros pormenores. Tendo isso em vista um comportamento linear entre as duas quantidades não era algo intuitivamente esperado, logo, a regressão linear foi apenas um primeiro passo em uma análise correlacional entre as duas quantidades, que no final das contas podem nem estar relacionadas afinal, contrariando nossa intuição.
+- A última análise feita nesse projeto foi uma análise totalmente simples, primeiramente, imaginamos que diversas variáveis governam o compartamento da curva de vacinações, não somente o investimento público em saúde, por exemplo, temos as durações das diferentes campanhas de vacinação e até as emergências de saúde de cada estado da região e vários outros pormenores. Tendo isso em vista, um comportamento linear entre as duas quantidades não era algo intuitivamente esperado, logo, a regressão linear foi apenas um primeiro passo em uma análise correlacional entre as duas quantidades, que no final das contas podem nem estar relacionadas, contrariando nossa intuição.
 
 # Ideias para projetos vindouros:
 
